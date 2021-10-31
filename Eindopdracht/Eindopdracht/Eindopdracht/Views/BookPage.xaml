@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eindopdracht.Views.BookPage">
+    <ContentPage.Content>
+        <ScrollView>
+            
+        
+        <StackLayout Margin="16" >
+            <Image x:Name="imgBook" Source="" Aspect="AspectFit" HeightRequest="200"/>
+            <Label x:Name="lblTitle" Text="" TextColor="Black" FontSize="Large"  HorizontalOptions="Start"/>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Text="Author(s):  " TextColor="Black" FontSize="Small" Margin="8" HorizontalOptions="Start"/>
+                <Label Grid.Row="0" Grid.Column="1" x:Name="lblAuthors" TextColor="Black" Text="" FontSize="Small" Margin="8" HorizontalOptions="Start"/>
+
+                <Label Grid.Row="1" Text="Subject(s):  " FontSize="Small" TextColor="Black" Margin="8" HorizontalOptions="Start"/>
+                <Label Grid.Row="1" Grid.Column="1" x:Name="lblSubjects" Text=""  TextColor="Black" FontSize="Small" Margin="8" HorizontalOptions="Start"/>
+
+                <Label Grid.Row="2" Text="Bookshelve(s):  " FontSize="Small" TextColor="Black" Margin="8" HorizontalOptions="Start"/>
+                <Label Grid.Row="2" Grid.Column="1" x:Name="lblBookshelves" TextColor="Black" Text="" FontSize="Small" Margin="8" HorizontalOptions="Start"/>
+
+                <Label Grid.Row="3" Text="Language(s):  " FontSize="Small" TextColor="Black"  Margin="8" HorizontalOptions="Start"/>
+                <Label Grid.Row="3" Grid.Column="1" x:Name="lblLanguages" TextColor="Black" Text="" FontSize="Small" Margin="8" HorizontalOptions="Start"/>
+
+            </Grid>
+            <Button x:Name="btnReadBook" Text="Read Book..." FontSize="Medium" TextColor="Black"  Margin="16" HorizontalOptions="Center"/>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

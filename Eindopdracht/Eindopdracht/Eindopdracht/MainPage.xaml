@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eindopdracht.MainPage" Background="green" NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <Grid BackgroundColor="#004D00">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Source="\Assets\arrow_back_black_24dp.svg"/>
+            <Label Grid.Column="1" Text="Start" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+
+        <ListView x:Name="lsvBooks" RowHeight="200" >
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <ViewCell >
+                        <Grid Padding="24" Background="white"  RowSpacing="100">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding Image_url}" Aspect="AspectFit"/>
+                            <StackLayout Grid.Column="1" HorizontalOptions="Start">
+                                <Label Text="{Binding Title}" TextColor="Black" FontSize="Medium" HorizontalOptions="Start"/>
+                                <Label Text="{Binding Authors_string}" FontSize="Small" Margin="8" HorizontalOptions="Start"/> 
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+
+</ContentPage>
