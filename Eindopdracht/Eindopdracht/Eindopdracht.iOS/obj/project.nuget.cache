@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "oIef00EK74wwSc39aGYC+KjvC82gOWwj0Fzwv5/etbpFT99ioLiGf3uZ0BBCc0rVxml8kKyS8H/ZSPeIOr4MYg==",
+  "success": true,
+  "projectFilePath": "D:\\wolf\\school\\2021-2022\\deviceProgrammer\\EindOpdracht_Wolf_Nemegeeg\\Eindopdracht\\Eindopdracht\\Eindopdracht.iOS\\Eindopdracht.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wolfn\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\wolfn\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
