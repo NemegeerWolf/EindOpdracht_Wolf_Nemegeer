@@ -22,11 +22,11 @@ namespace Eindopdracht.Repositories
             return client;
         }
 
-        public async static Task<List<Book>> GetBooksAsync()
+        public async static Task<List<Book>> GetBooksAsync(int PageNumber)
         {
             using (HttpClient client = GetClient())
             {
-                string url = $"{API_URL}";
+                string url = $"{API_URL}/?page={PageNumber}";
                 try
                 {  
                     string json = await client.GetStringAsync(url);

@@ -4,7 +4,7 @@
              x:Class="Eindopdracht.MainPage" BackgroundColor="LightSeaGreen" NavigationPage.HasNavigationBar="False" >
 
     <StackLayout Spacing="0">
-        <Grid Background="#2296F3" HeightRequest="60">
+        <Grid Background="#2296F3" HeightRequest="80" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
                 <ColumnDefinition Width="auto"/>
@@ -32,9 +32,9 @@
                             </Grid.ColumnDefinitions>
                             
                             <Image Source="{Binding Image_url}" Aspect="AspectFit"/>
-                            <StackLayout Grid.Column="1" HorizontalOptions="Start">
+                            <StackLayout Grid.Column="1" HorizontalOptions="StartAndExpand">
                                 <Label Text="{Binding Title}" TextColor="Black" FontSize="Medium" HorizontalOptions="Start"/>
-                                <Label Text="{Binding Authors_string}" FontSize="Small" Margin="8" HorizontalOptions="Start"/> 
+                                <Label Text="{Binding Authors_string}" FontSize="Small" Margin="8" HeightRequest="60" TextColor="Black" HorizontalOptions="Center"/> 
                             </StackLayout>
                         </Grid>
                             <Rectangle />
@@ -43,7 +43,19 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <Grid Background="#2296F3" HeightRequest="60" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button Clicked="btnPreviousPage_Clicked"  x:Name="btnPreviousPage" Text="&lt;--" TextColor="White" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" BackgroundColor="#2296F3"/>
+            <Label x:Name="lblPageNumber" Grid.Column="1" Text="1" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Button Clicked="btnNextPage_Clicked" x:Name="btnNextPage" Grid.Column="2" Text="-->" TextColor="White" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" BackgroundColor="#2296F3"/>
+        </Grid>
+
     </StackLayout>
 
 </ContentPage>

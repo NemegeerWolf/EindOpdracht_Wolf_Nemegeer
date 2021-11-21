@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Eindopdracht.Views.BookPage" NavigationPage.HasNavigationBar="False">
+             x:Class="Eindopdracht.Views.BookPage" BackgroundColor="White" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         
 
@@ -46,8 +46,9 @@
                 <Label Grid.Row="3" Grid.Column="1" x:Name="lblLanguages" TextColor="Black" Text="" FontSize="Small" Margin="8" HorizontalOptions="Start"/>
 
             </Grid>
-            <Button x:Name="btnReadBook" Text="Read Book..." FontSize="Medium" TextColor="Black"  Margin="16" HorizontalOptions="Center"/>
-        
+            <Button x:Name="btnReadBook" Text="Read Book..." FontSize="Medium" TextColor="Black" BackgroundColor="White"  Margin="8" HorizontalOptions="Center"/>
+            <Button x:Name="btnWriteReview" Text="Write a Review" FontSize="Medium" TextColor="Black" BackgroundColor="White" Margin="8" HorizontalOptions="Center"/>
+            
         </StackLayout>
         </ScrollView>
         </StackLayout>

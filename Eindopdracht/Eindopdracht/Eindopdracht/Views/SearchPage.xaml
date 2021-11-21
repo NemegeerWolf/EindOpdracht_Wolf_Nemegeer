@@ -4,7 +4,7 @@
              x:Class="Eindopdracht.Views.SearchPage" BackgroundColor="LightSeaGreen" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout Spacing="0">
-            <Grid Background="#2296F3" HeightRequest="80">
+            <Grid Background="#2296F3" HeightRequest="80" VerticalOptions="StartAndExpand">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition Width="auto" />

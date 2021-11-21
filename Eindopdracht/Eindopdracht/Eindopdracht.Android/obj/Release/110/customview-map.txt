@@ -10,6 +10,7 @@ androidx.appcompat.widget.Toolbar;D:\wolf\school\2021-2022\deviceProgrammer\Eind
 androidx.coordinatorlayout.widget.CoordinatorLayout;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\layout\rootlayout.xml
 androidx.coordinatorlayout.widget.CoordinatorLayout;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\layout\shellcontent.xml
 attr;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\values\attrs.xml
+attr;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\90\jl\res\values\attrs.xml
 background;obj\Release\110\res\mipmap-anydpi-v26\icon.xml
 background;obj\Release\110\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\44\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -22,6 +23,8 @@ com.google.android.material.tabs.TabLayout;D:\wolf\school\2021-2022\deviceProgra
 com.google.android.material.tabs.TabLayout;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\layout\rootlayout.xml
 com.google.android.material.tabs.TabLayout;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\layout\tabbar.xml
 declare-styleable;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\values\attrs.xml
+declare-styleable;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\90\jl\res\values\attrs.xml
+enum;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\90\jl\res\values\attrs.xml
 external-cache-path;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\44\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\44\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Release\110\res\mipmap-anydpi-v26\icon.xml
@@ -33,6 +36,8 @@ paths;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindo
 resources;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\values\attrs.xml
 resources;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\values\strings.xml
 resources;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\values\styles.xml
+resources;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\90\jl\res\values\attrs.xml
+resources;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\90\jl\res\values\strings.xml
 resources;obj\Release\110\res\values\colors.xml
 resources;obj\Release\110\res\values\styles.xml
 set;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\anim\enterfromleft.xml
@@ -40,6 +45,7 @@ set;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopd
 set;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\anim\exittoleft.xml
 set;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\anim\exittoright.xml
 string;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\values\strings.xml
+string;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\90\jl\res\values\strings.xml
 style;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\values\styles.xml
 style;obj\Release\110\res\values\styles.xml
 translate;D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.Android\obj\Release\110\lp\45\jl\res\anim\enterfromleft.xml

@@ -79,7 +79,18 @@ namespace Eindopdracht.Models
         {
             get
             {
-                return Formats["text/plain;charset=utf-8"];
+                if( Formats.ContainsKey("text/plain;charset=utf-8")){
+                    return Formats["text/plain;charset=utf-8"];
+                }
+                else if (Formats.ContainsKey("text/html"))
+                {
+                    return Formats["text/html"];
+                }
+                else
+                {
+                    return Formats["text/plain"];
+                }
+                
             }
         } // enkel text/plain; of (text/html)
 

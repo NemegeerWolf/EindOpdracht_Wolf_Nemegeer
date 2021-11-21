@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eindopdracht.Views.ReviewPage" BackgroundColor="White" NavigationPage.HasNavigationBar="False"
+            xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Background="#2296F3" HeightRequest="60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="auto"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="imgBack"  Source="" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <Label Grid.Column="1" Text="DetailPage" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+            <StackLayout Margin="16">
+                <rating:SfRating ItemCount="5" Precision="Standard"/>
+                
+                <Editor x:Name="txtReview" HeightRequest="100" BackgroundColor="Beige" TextColor="Black" PlaceholderColor="Gray" Placeholder="Write your review here"/>
+                <Label Margin=" 0, 16, 0, 0" Text="Reviews:" TextColor="Black" FontSize="Medium"/>
+
+                <ListView x:Name="lsvBooks" RowHeight="210" >
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell>
+                            <StackLayout >
+
+                                <Grid Padding="8" Background="white" HeightRequest="200">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="1" HorizontalOptions="StartAndExpand">
+                                        <Label Text="{Binding Date}" TextColor="Black" FontSize="Medium" HorizontalOptions="Start"/>
+                                        <Label Text="{Binding Text}" FontSize="Small" Margin="8" HeightRequest="60" TextColor="Black" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                </Grid>
+                                <Rectangle />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

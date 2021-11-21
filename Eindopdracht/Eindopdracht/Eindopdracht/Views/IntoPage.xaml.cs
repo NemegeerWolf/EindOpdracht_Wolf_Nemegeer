@@ -19,7 +19,7 @@ namespace Eindopdracht.Views
         {
             InitializeComponent();
             book = pbook;
-            Browser.Source = book.Formats["text/html; charset=utf-8"];
+            Browser.Source = book.Text_Url;
             TapGestureRecognizer recognizer = new TapGestureRecognizer();
             recognizer.Tapped += Recognizer_Tapped;
             imgBack.GestureRecognizers.Add(recognizer);

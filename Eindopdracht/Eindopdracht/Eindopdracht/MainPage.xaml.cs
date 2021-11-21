@@ -14,6 +14,8 @@ namespace Eindopdracht
 {
     public partial class MainPage : ContentPage
     {
+        private int pageNumber = 1;
+
         public MainPage()
         {
             InitializeComponent();
@@ -24,7 +26,7 @@ namespace Eindopdracht
         
         public async void test()
         {
-            List<Book> lstcities = await BooksRepositorie.GetBooksAsync();
+            List<Book> lstcities = await BooksRepositorie.GetBooksAsync(pageNumber);
             //foreach (Book city in lstcities)
             //{
             //    Debug.WriteLine(city.Title);
@@ -38,7 +40,7 @@ namespace Eindopdracht
         {
             //imgBack.Source = ImageSource.FromResource("Eindopdracht.Assets.baseline_arrow_back_white_24dp.png");
 
-            List<Book> lstbooks = await BooksRepositorie.GetBooksAsync();
+            List<Book> lstbooks = await BooksRepositorie.GetBooksAsync(pageNumber);
             lsvBooks.ItemsSource = lstbooks;
 
             lsvBooks.ItemSelected += lsvBooks_Clicked;
@@ -53,6 +55,34 @@ namespace Eindopdracht
                 Navigation.PushAsync(new BookPage(book));
                 lsvBooks.SelectedItem = null;
             }
+        }
+
+        private async void btnPreviousPage_Clicked(object sender, EventArgs e)
+        {
+            pageNumber--;
+            if (pageNumber < 1) pageNumber = 1;
+            else
+            {
+                List<Book> lstbooks = await BooksRepositorie.GetBooksAsync(pageNumber);
+                lsvBooks.ItemsSource = lstbooks;
+            }
+            
+
+            lblPageNumber.Text = pageNumber.ToString();
+        }
+
+        private async void btnNextPage_Clicked(object sender, EventArgs e)
+        {
+            pageNumber++;
+            if (pageNumber > 2084) pageNumber = 2084;
+            else 
+            {
+                List<Book> lstbooks = await BooksRepositorie.GetBooksAsync(pageNumber);
+                lsvBooks.ItemsSource = lstbooks;
+            }
+            
+
+            lblPageNumber.Text = pageNumber.ToString();
         }
     }
 }
