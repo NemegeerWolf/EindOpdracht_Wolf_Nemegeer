@@ -1,4 +1,3 @@
-D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\netstandard2.0\Eindopdracht.csproj.AssemblyReference.cache
 D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\netstandard2.0\Eindopdracht.GeneratedMSBuildEditorConfig.editorconfig
 D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
@@ -16,3 +15,4 @@ D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdrach
 D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\netstandard2.0\Eindopdracht.dll
 D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\netstandard2.0\ref\Eindopdracht.dll
 D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\netstandard2.0\Eindopdracht.pdb
+D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht\obj\Debug\netstandard2.0\Eindopdracht.csproj.AssemblyReference.cache

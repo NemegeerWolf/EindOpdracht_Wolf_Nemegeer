@@ -46,7 +46,7 @@ namespace Eindopdracht.Repositories
                 catch (Exception ex)
                 {
 
-                    throw ex;
+                     throw ex;
                 }
             }
         }

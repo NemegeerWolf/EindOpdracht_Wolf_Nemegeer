@@ -1,34 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Eindopdracht.MainPage" Background="green" NavigationPage.HasNavigationBar="False">
+             x:Class="Eindopdracht.MainPage" BackgroundColor="LightSeaGreen" NavigationPage.HasNavigationBar="False" >
 
-    <StackLayout>
-        <Grid BackgroundColor="#004D00">
+    <StackLayout Spacing="0">
+        <Grid Background="#2296F3" HeightRequest="60">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="50"/>
                 <ColumnDefinition Width="auto"/>
-                <ColumnDefinition/>
+                
             </Grid.ColumnDefinitions>
-            <Image Source="\Assets\arrow_back_black_24dp.svg"/>
+            <Image x:Name="imgBack"  Source="" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
+
             <Label Grid.Column="1" Text="Start" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
         </Grid>
 
-        <ListView x:Name="lsvBooks" RowHeight="200" >
-            <ListView.ItemTemplate>
+        <ListView x:Name="lsvBooks" RowHeight="210" >
+            <ListView.ItemTemplate >
                 <DataTemplate >
-                    <ViewCell >
-                        <Grid Padding="24" Background="white"  RowSpacing="100">
+                    <ViewCell>
+                        <StackLayout >
+                            
+                            <Grid Padding="8" Background="white" HeightRequest="200">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
+                            
                             <Image Source="{Binding Image_url}" Aspect="AspectFit"/>
                             <StackLayout Grid.Column="1" HorizontalOptions="Start">
                                 <Label Text="{Binding Title}" TextColor="Black" FontSize="Medium" HorizontalOptions="Start"/>
                                 <Label Text="{Binding Authors_string}" FontSize="Small" Margin="8" HorizontalOptions="Start"/> 
                             </StackLayout>
                         </Grid>
+                            <Rectangle />
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

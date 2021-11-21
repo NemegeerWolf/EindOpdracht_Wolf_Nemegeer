@@ -1,9 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Eindopdracht.Views.IntoPage">
+             x:Class="Eindopdracht.Views.IntoPage" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
+            <Grid Background="#2296F3" HeightRequest="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="auto"/>
+
+                </Grid.ColumnDefinitions>
+                <Image x:Name="imgBack"  Source="" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <Label Grid.Column="1" Text="Reading View" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
             <WebView x:Name="Browser" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>

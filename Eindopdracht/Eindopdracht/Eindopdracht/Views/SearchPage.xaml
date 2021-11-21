@@ -1,12 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Eindopdracht.Views.SearchPage">
+             x:Class="Eindopdracht.Views.SearchPage" BackgroundColor="LightSeaGreen" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Spacing="0">
+            <Grid Background="#2296F3" HeightRequest="80">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Image x:Name="imgBack"  Source="" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <StackLayout>
+                <Label Grid.Column="1" Text="ZoekPagina" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <InputView x:Name="txtZoekOpdracht"/>
+                </StackLayout>
+            </Grid>
+
+            <ListView x:Name="lsvBooks" RowHeight="210" >
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell>
+                            <StackLayout >
+
+                                <Grid Padding="8" Background="white" HeightRequest="200">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding Image_url}" Aspect="AspectFit"/>
+                                    <StackLayout Grid.Column="1" HorizontalOptions="Start">
+                                        <Label Text="{Binding Title}" TextColor="Black" FontSize="Medium" HorizontalOptions="Start"/>
+                                        <Label Text="{Binding Authors_string}" FontSize="Small" Margin="8" HorizontalOptions="Start"/>
+                                    </StackLayout>
+                                </Grid>
+                                <Rectangle />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

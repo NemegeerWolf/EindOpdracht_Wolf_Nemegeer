@@ -23,8 +23,8 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.companyname.eindopdracht"
-	.size	.L.env.str.1, 29
+	.asciz	"com.companyname.BookReaderByWolfobus"
+	.size	.L.env.str.1, 37
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
 	.p2align	2
@@ -92,7 +92,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"53d390ff-0aff-4f17-a4b0-aef751725ee0"
+	.asciz	"35936d2c-474b-405c-816e-ab02f5c9e1c5"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object

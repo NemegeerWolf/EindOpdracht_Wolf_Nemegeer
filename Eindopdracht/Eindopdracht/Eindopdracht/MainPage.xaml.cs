@@ -36,6 +36,8 @@ namespace Eindopdracht
 
         private async void setup()
         {
+            //imgBack.Source = ImageSource.FromResource("Eindopdracht.Assets.baseline_arrow_back_white_24dp.png");
+
             List<Book> lstbooks = await BooksRepositorie.GetBooksAsync();
             lsvBooks.ItemsSource = lstbooks;
 
@@ -49,6 +51,7 @@ namespace Eindopdracht
             if(book != null)
             {
                 Navigation.PushAsync(new BookPage(book));
+                lsvBooks.SelectedItem = null;
             }
         }
     }

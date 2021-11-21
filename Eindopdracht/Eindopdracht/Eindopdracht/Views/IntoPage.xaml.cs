@@ -20,6 +20,17 @@ namespace Eindopdracht.Views
             InitializeComponent();
             book = pbook;
             Browser.Source = book.Formats["text/html; charset=utf-8"];
+            TapGestureRecognizer recognizer = new TapGestureRecognizer();
+            recognizer.Tapped += Recognizer_Tapped;
+            imgBack.GestureRecognizers.Add(recognizer);
+            imgBack.Source = ImageSource.FromResource("Eindopdracht.Assets.baseline_arrow_back_white_24dp.png");
+
         }
+
+        private void Recognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
     }
 }

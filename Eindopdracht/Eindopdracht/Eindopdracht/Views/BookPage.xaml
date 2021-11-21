@@ -1,23 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Eindopdracht.Views.BookPage">
+             x:Class="Eindopdracht.Views.BookPage" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <ScrollView>
-            
         
-        <StackLayout Margin="16" >
-            <Image x:Name="imgBook" Source="" Aspect="AspectFit" HeightRequest="200"/>
+
+            <StackLayout>
+                <Grid Background="#2296F3" HeightRequest="60">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="auto"/>
+
+                    </Grid.ColumnDefinitions>
+                   
+                    <Image x:Name="imgBack"  Source="" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    
+                    <Label Grid.Column="1" Text="DetailPage" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+        
+        <ScrollView>
+            <StackLayout Margin="16" >
+                <Image x:Name="imgBook" Source="" Aspect="AspectFit" HeightRequest="200"/>
             <Label x:Name="lblTitle" Text="" TextColor="Black" FontSize="Large"  HorizontalOptions="Start"/>
-            <Grid >
+            <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="auto"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0" Text="Author(s):  " TextColor="Black" FontSize="Small" Margin="8" HorizontalOptions="Start"/>
@@ -34,7 +47,9 @@
 
             </Grid>
             <Button x:Name="btnReadBook" Text="Read Book..." FontSize="Medium" TextColor="Black"  Margin="16" HorizontalOptions="Center"/>
+        
         </StackLayout>
         </ScrollView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

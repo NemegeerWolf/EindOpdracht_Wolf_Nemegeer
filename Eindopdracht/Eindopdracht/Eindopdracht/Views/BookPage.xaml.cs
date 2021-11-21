@@ -24,6 +24,12 @@ namespace Eindopdracht.Views
 
         private void setup()
         {
+            TapGestureRecognizer recognizer = new TapGestureRecognizer();
+            recognizer.Tapped += Recognizer_Tapped;
+            imgBack.GestureRecognizers.Add(recognizer);
+            imgBack.Source = ImageSource.FromResource("Eindopdracht.Assets.baseline_arrow_back_white_24dp.png");
+           
+
             imgBook.Source = book.Image_url;
             lblTitle.Text = book.Title;
 
@@ -36,13 +42,20 @@ namespace Eindopdracht.Views
             btnReadBook.Clicked += btnReadBook_IsClicked;
         }
 
+        private void Recognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
         private void btnReadBook_IsClicked(object sender, EventArgs e)
         {
             
             
-            
+                
                 Navigation.PushAsync(new IntoPage(book));
-            
+                
         }
+
+        
     }
 }
