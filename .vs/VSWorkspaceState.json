@@ -4,8 +4,9 @@
     "\\Eindopdracht",
     "\\Eindopdracht\\Eindopdracht",
     "\\Eindopdracht\\Eindopdracht\\Eindopdracht",
-    "\\Eindopdracht\\Eindopdracht\\Eindopdracht\\Repositories"
+    "\\Eindopdracht\\Eindopdracht\\Eindopdracht\\Repositories",
+    "\\Eindopdracht\\Eindopdracht\\Eindopdracht\\Views"
   ],
-  "SelectedNode": "\\Eindopdracht\\Eindopdracht\\Eindopdracht\\Repositories\\BooksRepositorie.cs",
+  "SelectedNode": "\\Eindopdracht\\Eindopdracht\\Eindopdracht\\Views\\ReviewPage.xaml",
   "PreviewInSolutionExplorer": false
 }

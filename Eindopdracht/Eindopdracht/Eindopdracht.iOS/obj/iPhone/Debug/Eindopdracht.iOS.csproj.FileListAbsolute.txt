@@ -57,3 +57,9 @@ D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdrach
 D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.iOS\obj\iPhone\Debug\Eindopdracht.iOS.csproj.CopyComplete
 D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.iOS\obj\iPhone\Debug\Eindopdracht.iOS.exe
 D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.iOS\obj\iPhone\Debug\Eindopdracht.iOS.pdb
+D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.iOS\bin\iPhone\Debug\Syncfusion.Licensing.dll
+D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.iOS\bin\iPhone\Debug\Syncfusion.Core.XForms.dll
+D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.iOS\bin\iPhone\Debug\Syncfusion.Core.XForms.iOS.dll
+D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.iOS\bin\iPhone\Debug\Syncfusion.SfRating.XForms.dll
+D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.iOS\bin\iPhone\Debug\Syncfusion.SfRating.XForms.iOS.dll
+D:\wolf\school\2021-2022\deviceProgrammer\EindOpdracht_Wolf_Nemegeeg\Eindopdracht\Eindopdracht\Eindopdracht.iOS\bin\iPhone\Debug\Syncfusion.SfRating.iOS.dll

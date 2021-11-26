@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Eindopdracht.Views.ReviewPage" BackgroundColor="White" NavigationPage.HasNavigationBar="False"
-            xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms">
-    
+             x:Class="Eindopdracht.Views.ReviewPage" BackgroundColor="White" NavigationPage.HasNavigationBar="False">
+
+
     <ContentPage.Content>
         <StackLayout>
             <Grid Background="#2296F3" HeightRequest="60">
@@ -12,18 +12,32 @@
                     <ColumnDefinition Width="auto"/>
 
                 </Grid.ColumnDefinitions>
-
+                 
                 <Image x:Name="imgBack"  Source="" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
 
                 <Label Grid.Column="1" Text="DetailPage" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
             </Grid>
             <StackLayout Margin="16">
-                <rating:SfRating ItemCount="5" Precision="Standard"/>
-                
-                <Editor x:Name="txtReview" HeightRequest="100" BackgroundColor="Beige" TextColor="Black" PlaceholderColor="Gray" Placeholder="Write your review here"/>
-                <Label Margin=" 0, 16, 0, 0" Text="Reviews:" TextColor="Black" FontSize="Medium"/>
 
-                <ListView x:Name="lsvBooks" RowHeight="210" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="imgStar1"  Source="star.jpg"  WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Image x:Name="imgStar2" Grid.Column="1" Source="star.jpg" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Image x:Name="imgStar3" Grid.Column="2" Source="star.jpg" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Image x:Name="imgStar4" Grid.Column="3" Source="star.jpg" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Image x:Name="imgStar5" Grid.Column="4" Source="star.jpg" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+                <Editor x:Name="txtReview" HeightRequest="100" BackgroundColor="Beige" TextColor="Black" PlaceholderColor="Gray" Placeholder="Write your review here"/>
+                <Button x:Name="btnSaveReview" Text="Sent" Background="white" BorderColor="White"/>
+                <Label Margin=" 0, 16, 0, 0" Text="Reviews:" TextColor="Black" FontSize="Medium"/>
+            
+            <ListView x:Name="lsvBooks" RowHeight="210" >
                 <ListView.ItemTemplate >
                     <DataTemplate >
                         <ViewCell>
