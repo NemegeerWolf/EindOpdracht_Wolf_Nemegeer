@@ -10,13 +10,15 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50"/>
                         <ColumnDefinition Width="auto"/>
-
-                    </Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                </Grid.ColumnDefinitions>
                    
                     <Image x:Name="imgBack"  Source="" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
                     
                     <Label Grid.Column="1" Text="DetailPage" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
-                </Grid>
+
+                <Image x:Name="imgHard" Grid.Column="2" Margin="0,0,16,0" Source="Hart_Full.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="End" VerticalOptions="Center"/>
+            </Grid>
         
         <ScrollView>
             <StackLayout Margin="16" >

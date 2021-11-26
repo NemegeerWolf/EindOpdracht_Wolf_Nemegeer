@@ -14,6 +14,8 @@
     <None Remove="Assets\arrow_back_black_24dp.svg" />
     <None Remove="Assets\baseline_arrow_back_black_24dp.png" />
     <None Remove="Assets\baseline_arrow_back_white_24dp.png" />
+    <None Remove="Assets\Hart_Empty.png" />
+    <None Remove="Assets\Hart_Full.png" />
     <None Remove="Assets\Star_empty.png" />
     <None Remove="Assets\Star_Full.png" />
   </ItemGroup>
@@ -21,6 +23,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Assets\arrow_back_black_24dp.svg" />
     <EmbeddedResource Include="Assets\baseline_arrow_back_white_24dp.png" />
+    <EmbeddedResource Include="Assets\Hart_Empty.png" />
+    <EmbeddedResource Include="Assets\Hart_Full.png" />
     <EmbeddedResource Include="Assets\Star_empty.png" />
     <EmbeddedResource Include="Assets\Star_Full.png" />
   </ItemGroup>

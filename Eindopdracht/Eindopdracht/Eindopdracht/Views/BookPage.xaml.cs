@@ -28,6 +28,7 @@ namespace Eindopdracht.Views
             recognizer.Tapped += Recognizer_Tapped;
             imgBack.GestureRecognizers.Add(recognizer);
             imgBack.Source = ImageSource.FromResource("Eindopdracht.Assets.baseline_arrow_back_white_24dp.png");
+            imgHard.Source = ImageSource.FromResource("Eindopdracht.Assets.hart_Empty.png");
 
 
             imgBook.Source = book.Image_url;

@@ -1,4 +1,5 @@
 ﻿using Eindopdracht.Models;
+using Eindopdracht.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +13,24 @@ namespace Eindopdracht.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ReviewPage : ContentPage
     {
-        private int Rating = 1;
+        private int rating = 1;
         Book book { get; set; }
         Image[] arrStars = new Image[5];
         public ReviewPage(Book pbook)
         {
             InitializeComponent();
             book = pbook;
+
+
+            setup();
+
+        }
+
+        private async void setup()
+        {
+            List<Review> lstReviews = await ReviewRepositorie.GetReviewsAsync(book.Id);
+            
+            lsvReviews.ItemsSource = lstReviews;
 
             TapGestureRecognizer recognizer = new TapGestureRecognizer();
             recognizer.Tapped += Recognizer_Tapped;
@@ -34,7 +46,7 @@ namespace Eindopdracht.Views
 
 
 
-            foreach(Image star in arrStars)
+            foreach (Image star in arrStars)
             {
                 TapGestureRecognizer recognizer2 = new TapGestureRecognizer();
                 recognizer2.Tapped += Star;
@@ -42,8 +54,6 @@ namespace Eindopdracht.Views
                 star.Source = ImageSource.FromResource("Eindopdracht.Assets.Star_empty.png");
             }
             imgStar1.Source = ImageSource.FromResource("Eindopdracht.Assets.Star_Full.png");
-            
-
         }
 
         private void Star(object sender, EventArgs e)
@@ -62,6 +72,7 @@ namespace Eindopdracht.Views
                 i++;
                 
             } while (checkstar != sender);
+            rating = i;
         }
 
         private void Recognizer_Tapped(object sender, EventArgs e)
@@ -69,5 +80,20 @@ namespace Eindopdracht.Views
             Navigation.PopAsync();
         }
 
+        private async void btnSaveReview_Clicked(object sender, EventArgs e)
+        {
+            Review rev = new Review
+            {
+                BookId = book.Id,
+                Message = txtReview.Text,
+                Stars = rating
+            };
+
+            await ReviewRepositorie.PostReviewsAsync(rev);
+            List<Review> lstReviews = await ReviewRepositorie.GetReviewsAsync(book.Id);
+
+            lsvReviews.ItemsSource = lstReviews;
+            txtReview.Text = ""; 
+        }
     }
 }

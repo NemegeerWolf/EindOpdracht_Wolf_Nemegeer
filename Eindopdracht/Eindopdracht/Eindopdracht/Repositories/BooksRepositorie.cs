@@ -26,7 +26,7 @@ namespace Eindopdracht.Repositories
         {
             using (HttpClient client = GetClient())
             {
-                string url = $"{API_URL}/?page={PageNumber}";
+                string url = $"{API_URL}?page={PageNumber}";
                 try
                 {  
                     string json = await client.GetStringAsync(url);
