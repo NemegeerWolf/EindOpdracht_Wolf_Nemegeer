@@ -8,11 +8,16 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
                 <ColumnDefinition Width="auto"/>
+                <ColumnDefinition x:Name="pkSearchCategorieColumn" Width="100"/>
+                <ColumnDefinition Width="*"/>
                 
             </Grid.ColumnDefinitions>
             <Image x:Name="imgBack"  Source="" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
 
             <Label Grid.Column="1" Text="Start" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Picker x:Name="pkSearchCategorie" Grid.Column="2" Title="Search" SelectedIndexChanged="pkSearchCategorie_SelectedIndexChanged" />
+
+            <Entry x:Name="txtSearchTerm" Grid.Column="3" HeightRequest="60" Margin="0,14,8,8" TextColor="Black" VerticalOptions="End" BackgroundColor="White" BindingContextChanged="txtSearchTerm_BindingContextChanged" Focused="txtSearchTerm_Focused" Unfocused="txtSearchTerm_Unfocused" Completed="txtSearchTerm_Completed"/>
         </Grid>
 
         <ListView x:Name="lsvBooks" RowHeight="210" >
@@ -53,7 +58,7 @@
 
             <Button Clicked="btnPreviousPage_Clicked"  x:Name="btnPreviousPage" Text="&lt;--" TextColor="White" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" BackgroundColor="#2296F3"/>
             <Label x:Name="lblPageNumber" Grid.Column="1" Text="1" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Button Clicked="btnNextPage_Clicked" x:Name="btnNextPage" Grid.Column="2" Text="-->" TextColor="White" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" BackgroundColor="#2296F3"/>
+            <Button Clicked="btnNextPage_Clicked" x:Name="btnNextPage" Grid.Column="2" Text="-->" TextColor="White" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" BackgroundColor="#2296F3" />
         </Grid>
 
     </StackLayout>

@@ -23,6 +23,10 @@ namespace Eindopdracht
 
         protected override void OnResume()
         {
+            InitializeComponent();
+
+            MainPage = new NavigationPage(new MainPage());
+            
         }
     }
 }

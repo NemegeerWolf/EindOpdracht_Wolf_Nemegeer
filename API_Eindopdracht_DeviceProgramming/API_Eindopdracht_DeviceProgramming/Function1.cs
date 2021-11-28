@@ -134,12 +134,12 @@ namespace API_Eindopdracht_DeviceProgramming
                 CloudTable table = tableClient.GetTableReference("Harts");
 
 
-                if (hart.Id == "" && hart.Id == null)
+                if (hart.Id == "" || hart.Id == null)
                 {
                     hart.Id = Guid.NewGuid().ToString();
                     HartEntity registrationEntity = new HartEntity(hart.BookId.ToString(), hart.Id)
                     {
-                        Like = hart.Like
+                        Like = false
                     };
                     TableOperation insertOperation = TableOperation.Insert(registrationEntity);
                     await table.ExecuteAsync(insertOperation);
@@ -205,7 +205,10 @@ namespace API_Eindopdracht_DeviceProgramming
                 var result = await table.ExecuteQuerySegmentedAsync<HartEntity>(query, null);
 
                 List<Hart> harts = new List<Hart>();
-
+                if(result.Results.Count == 0)
+                {
+                    return new OkObjectResult(null);
+                }
                 foreach (var hart in result.Results)
                 {
                     harts.Add(new Hart()
@@ -218,6 +221,52 @@ namespace API_Eindopdracht_DeviceProgramming
                     });
                 }
                 
+                return new OkObjectResult(harts[0]);
+            }
+            catch (Exception ex)
+            {
+
+                return new BadRequestObjectResult(ex);
+            }
+
+        }
+
+        [FunctionName("SelectAllHartV1")]
+        public async Task<IActionResult> SelectAllHartV1(
+              [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "v1/harts")] HttpRequest req,
+              
+              ILogger log)
+        {
+            try
+            {
+
+
+                var connectionString = Environment.GetEnvironmentVariable("ConnectionStringStorage");
+
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
+                CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
+                CloudTable table = tableClient.GetTableReference("Harts");
+
+                TableQuery<HartEntity> query = new TableQuery<HartEntity>().Where(TableQuery.GenerateFilterConditionForBool("Like", "eq", true));
+                var result = await table.ExecuteQuerySegmentedAsync<HartEntity>(query, null);
+
+                List<Hart> harts = new List<Hart>();
+                if (result.Results.Count == 0)
+                {
+                    return new OkObjectResult(null);
+                }
+                foreach (var hart in result.Results)
+                {
+                    harts.Add(new Hart()
+                    {
+                        BookId = Convert.ToInt32(hart.PartitionKey),
+                        Id = hart.RowKey,
+                        Like = hart.Like
+
+
+                    });
+                }
+
                 return new OkObjectResult(harts);
             }
             catch (Exception ex)

@@ -1,4 +1,5 @@
 ﻿using Eindopdracht.Models;
+using Eindopdracht.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,9 @@ namespace Eindopdracht.Views
 
         public IntoPage(Book pbook)
         {
+
             InitializeComponent();
+            Network.NetworkControle();
             book = pbook;
             Browser.Source = book.Text_Url;
             TapGestureRecognizer recognizer = new TapGestureRecognizer();

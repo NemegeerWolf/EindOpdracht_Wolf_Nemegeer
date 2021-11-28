@@ -8,5 +8,6 @@ namespace Eindopdracht.Models
     {
         public bool Like { get; set; }
         public int BookId { get; set; }
+        public string id { get; set; }
     }
 }

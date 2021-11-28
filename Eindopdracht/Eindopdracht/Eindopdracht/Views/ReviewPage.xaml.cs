@@ -1,5 +1,6 @@
 ﻿using Eindopdracht.Models;
 using Eindopdracht.Repositories;
+using Eindopdracht.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,8 +29,9 @@ namespace Eindopdracht.Views
 
         private async void setup()
         {
+            Network.NetworkControle();
             List<Review> lstReviews = await ReviewRepositorie.GetReviewsAsync(book.Id);
-            
+
             lsvReviews.ItemsSource = lstReviews;
 
             TapGestureRecognizer recognizer = new TapGestureRecognizer();
@@ -60,7 +62,7 @@ namespace Eindopdracht.Views
         {
             foreach (Image star in arrStars)
             {
-                
+
                 star.Source = ImageSource.FromResource("Eindopdracht.Assets.Star_empty.png");
             }
             int i = 0;
@@ -70,7 +72,7 @@ namespace Eindopdracht.Views
                 checkstar = arrStars[i];
                 checkstar.Source = ImageSource.FromResource("Eindopdracht.Assets.Star_Full.png");
                 i++;
-                
+
             } while (checkstar != sender);
             rating = i;
         }
@@ -82,18 +84,26 @@ namespace Eindopdracht.Views
 
         private async void btnSaveReview_Clicked(object sender, EventArgs e)
         {
-            Review rev = new Review
+            if (Network.NetworkControle() == true)
             {
-                BookId = book.Id,
-                Message = txtReview.Text,
-                Stars = rating
-            };
+                Review rev = new Review
+                {
+                    BookId = book.Id,
+                    Message = txtReview.Text,
+                    Stars = rating
+                };
 
-            await ReviewRepositorie.PostReviewsAsync(rev);
-            List<Review> lstReviews = await ReviewRepositorie.GetReviewsAsync(book.Id);
+                await ReviewRepositorie.PostReviewsAsync(rev);
+                List<Review> lstReviews = await ReviewRepositorie.GetReviewsAsync(book.Id);
 
-            lsvReviews.ItemsSource = lstReviews;
-            txtReview.Text = ""; 
+                lsvReviews.ItemsSource = lstReviews;
+                txtReview.Text = "";
+            }
+            else
+            {
+                Navigation.PushAsync(new NoNetworkPage());
+
+            }
+            }
         }
     }
-}
