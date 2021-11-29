@@ -15,7 +15,7 @@
             <Image x:Name="imgBack"  Source="" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
 
             <Label Grid.Column="1" Text="Start" TextColor="White" FontSize="Title" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <Picker x:Name="pkSearchCategorie" Grid.Column="2" Title="Search" SelectedIndexChanged="pkSearchCategorie_SelectedIndexChanged" />
+            <Picker x:Name="pkSearchCategorie" Grid.Column="2" Title="Search ^" SelectedIndexChanged="pkSearchCategorie_SelectedIndexChanged" />
 
             <Entry x:Name="txtSearchTerm" Grid.Column="3" HeightRequest="60" Margin="0,14,8,8" TextColor="Black" VerticalOptions="End" BackgroundColor="White" BindingContextChanged="txtSearchTerm_BindingContextChanged" Focused="txtSearchTerm_Focused" Unfocused="txtSearchTerm_Unfocused" Completed="txtSearchTerm_Completed"/>
         </Grid>
